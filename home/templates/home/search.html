@@ -1,0 +1,27 @@
+{% load static %}
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="{% static "home/js/followers.js" %}"></script>
+  <link rel="stylesheet" type="text/css" href="{% static "home/css/search.css" %}">
+</head>
+{% block content %}
+
+  <div id="search-div-container">
+    <p>Search results</p>
+    {%for i in search_result %}
+      <div id=search-div>
+        <div id="bgimg"></div>
+        <p id="username" value="{{i.username}}">{{i.username}}</p>
+
+          {% if i.is_following %}
+            <p value="following" id="is_following">"unfollow"</p>
+          {% else %}
+            <p value="not_following" id="is_following">"follow"</p>
+          {% endif %}
+        </div>
+    {%endfor%}
+
+</div>
+
+
+{% endblock %}

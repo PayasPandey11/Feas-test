@@ -1,0 +1,36 @@
+{% load static %}
+<head>
+<link rel="stylesheet" type="text/css" href="{% static "home/css/home_index.css" %}">
+</head>
+{% block content %}
+<H2>Home<H2>
+<div id="post-tweet-div">
+
+
+  <form action="tweet" method="post">
+    {% csrf_token %}
+    Tweet: <input id="tweet-input" type="text" name="tweet" maxlength="80">
+    <button type="submit">Tweet</button>
+  </form>
+</div>
+
+<div id="search-box-div">
+  <form action="search" method="post">
+    {% csrf_token %}
+    Search: <input type="text" id="search-user" name="username" minlength=4>
+    <button type="submit" id="search-div" value="search">Search</button>
+  </form>
+</div>
+<div id="tweet-div-container" >
+  {% if is_tweet %}
+    {%for i in tweets %}
+    <div id="tweet-div">
+      <p id="tweet-text">{{i.tweet}}</p>
+      <p id="posted_on">{{i.posted_on}}</p>
+    </div>
+    {%endfor%}
+</div>
+
+  {% endif %}
+
+{% endblock %}

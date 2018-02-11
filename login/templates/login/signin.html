@@ -1,0 +1,21 @@
+{% load static %}
+<head>
+  <link rel="stylesheet" type="text/css" href="{% static "login/css/login_index.css" %}">
+</head>
+<H1>Signin<H1>
+
+{% block content %}
+<p id = "error" >{{error}}</p>
+<div id ="signin-div">
+  <H2>Log-in<H2>
+  <form method="post" action="signin">
+    {% csrf_token %}
+    <input type="text" class="text-fields" name="email">
+    <input type="password" class="text-fields" name="password">
+    <button type="submit">Log in</button>
+  </form>
+</div>
+
+
+
+{% endblock %}

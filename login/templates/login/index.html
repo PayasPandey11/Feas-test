@@ -1,0 +1,35 @@
+{% load static %}
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="{% static "login/css/login_index.css" %}">
+<script src="{% static "login/js/login_index.js" %}"></script>
+</head>
+{% block content %}
+<p id = "error" >{{error}}</p>
+<div id ="signin-div">
+  <H2>Log-in<H2>
+  <form method="post" action="signin">
+    {% csrf_token %}
+    <input type="text" class="text-fields" name="email">
+    <input type="password" class="text-fields" name="password">
+    <button type="submit">Log in</button>
+  </form>
+</div>
+
+
+<div id ="signup-div">
+  <H2>Sign-up<H2>
+  <form>
+    {% csrf_token %}
+    <input type="text" class="text-fields" id ="signup-username" name="name">
+    <input type="text" class="text-fields" id ="signup-email" name="email">
+    <input type="password" class="text-fields" id ="signup-password" name="password">
+
+    <div id="signup-button">Signup</div>
+
+  </form>
+</div>
+
+
+
+{% endblock %}

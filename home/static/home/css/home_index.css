@@ -1,0 +1,54 @@
+body {
+
+    background: linear-gradient(to right, #1c92d2 , #f2fcfe);
+    font-family: 'Playfair Display', serif;
+    color: #3e403f;
+}
+.text-fields{
+    display: block;
+    margin: 1vh;
+}
+
+
+#post-tweet-div{
+  position: absolute;
+  top:10vh;
+  left: 20vw;
+}
+#tweet-input{
+  height: 10vh;
+  width:30vw;
+  border-radius: 5px;
+  margin: 2% auto;
+
+}
+#search-box-div{
+  position: absolute;
+  top:1vh;
+  right: 4vw;
+}
+#tweet-div-container{
+  position: absolute;
+  top:30vh;
+  left: 15vw;
+  width:56vw;
+}
+#tweet-div{
+  position: relative;
+  border-radius: 5px;
+  margin: 2% auto;
+  box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
+  padding: 2%;
+  background-color: white
+}
+#tweet-text{
+  display:inline;
+}
+#posted_on{
+
+  font-size:10px;
+  position:relative;
+  left: 75%;
+  bottom: 0px;
+
+}

@@ -1,0 +1,32 @@
+body {
+
+    background: linear-gradient(to right, #1c92d2 , #f2fcfe);
+    font-family: 'Playfair Display', serif;
+    color: #3e403f;
+}
+
+#search-div-container{
+  position: absolute;
+  top:20vh;
+  left: 15vw;
+  width:56vw;
+}
+#search-div{
+  position: relative;
+  border-radius: 5px;
+  margin: 2% auto;
+  box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
+  padding: 2%;
+  background-color: white
+}
+#bgimg{
+  background-image: url('../images/dummy.png');
+  height: 60px;
+  width: 60px;
+  background-size: contain;
+  background-color: grey;
+  display: inline-block;
+}
+#username{
+  display: inline;
+}
