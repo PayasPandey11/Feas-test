@@ -10,8 +10,8 @@
   <H2>Log-in<H2>
   <form method="post" action="signin">
     {% csrf_token %}
-    <input type="text" class="text-fields" name="email">
-    <input type="password" class="text-fields" name="password">
+    <input type="text" class="text-fields" placeholder="Email" name="email">
+    <input type="password" class="text-fields" placeholder="password" name="password">
     <button type="submit">Log in</button>
   </form>
 </div>
@@ -21,9 +21,9 @@
   <H2>Sign-up<H2>
   <form>
     {% csrf_token %}
-    <input type="text" class="text-fields" id ="signup-username" name="name">
-    <input type="text" class="text-fields" id ="signup-email" name="email">
-    <input type="password" class="text-fields" id ="signup-password" name="password">
+    <input type="text" class="text-fields" placeholder="username" id ="signup-username" name="name">
+    <input type="text" class="text-fields" placeholder="email" id ="signup-email" name="email">
+    <input type="password" class="text-fields" placeholder="password" id ="signup-password" name="password">
 
     <div id="signup-button">Signup</div>
 
